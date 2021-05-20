@@ -15,6 +15,7 @@ function randomtext() {
 }
 
 function esForm(formId){
+	inputFields= [];
 	$("#"+formId+" input").each(function(){
 		var inputObject = {};
 		inputObject.name = ($(this).attr("name") == undefined)?randomtext():$(this).attr("name");

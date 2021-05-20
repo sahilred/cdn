@@ -50,12 +50,14 @@ function generatePopup(){
 	var formfields = "";
 	
 	formfields += "var formOBJ = ";
+        formfields += "{";
 	for(var i=0;i<inputFields.length;i++){
 		if(i!=0){
 			formfields += ",";
 		}
-		formfields += "{\""+inputFields[i].name+"\":\""+inputFields[i].value+"\"}";
+		formfields += "\""+inputFields[i].name+"\":\""+inputFields[i].value+"\"";
 	}
+formfields += "}";
 	formfields += ";";
 	
 
